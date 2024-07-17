@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versicherungen</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <nui>
+        <button class="btn">SCHLIESSEN</button>
+        <div class="container">
+            <h1>VERSICHERUNGEN</h1>
+            <div class="slider">
+                <button class="prev" onclick="prevSlide()">&#9664;</button>
+                <div class="slide">
+                    <div class="card">
+                        <h2>FAHRZEUGVERSICHERUNG</h2>
+                        <p id="price_car">Preis</p>
+                        <img src="assets/car.png" alt="Fahrzeugversicherung">
+                        <button id="car" class="btn_anmelden">ANMELDEN</button>
+                    </div>
+                    <div class="card">
+                        <h2>KRANKENVERSICHERUNG</h2>
+                        <p id="price_krank">Preis</p>
+                        <img src="assets/krank.png" alt="Krankenversicherung">
+                        <button id="krank" class="btn_anmelden">ANMELDEN</button>
+                    </div>
+                    <div class="card">
+                        <h2>HAFTPFLICHTVERSICHERUNG</h2>
+                        <p id="price_haft">Preis</p>
+                        <img src="assets/haftpflicht.png" alt="Haftpflicht">
+                        <button id="haft" class="btn_anmelden">ANMELDEN</button>
+                    </div>
+                    <div class="card">
+                        <h2>WOHNGEBÄUDEVERSICHERUNG</h2>
+                        <p id="price_wohn">Preis</p>
+                        <img src="assets/wohngebauede.png" alt="Fahrzeugversicherung">
+                        <button id="wohn" class="btn_anmelden">ANMELDEN</button>
+                    </div>
+                    <div class="card">
+                        <h2>BERUFSUNFÄHIGKEITSVERSICHERUNG</h2>
+                        <p id="price_beruf">Preis</p>
+                        <img src="assets/berufsunfaehigkeit.png" alt="Krankenversicherung">
+                        <button id="beruf" class="btn_anmelden">ANMELDEN</button>
+                    </div>
+                    <div class="card">
+                        <h2>RECHTSSCHUTZVERSICHERUNG</h2>
+                        <p id="price_recht">Preis</p>
+                        <img src="assets/rechtsschutz.png" alt="Haftpflicht">
+                        <button id="recht" class="btn_anmelden">ANMELDEN</button>
+                    </div>
+                </div>
+                <button class="next" onclick="nextSlide()">&#9654;</button>
+            </div>
+        </div>    
+    </nui>
+    <script src="scripts.js"></script>
+</body>
+</html>

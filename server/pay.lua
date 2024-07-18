@@ -8,11 +8,13 @@ function deductMoneyFromPlayers()
         local xPlayer = ESX.GetPlayerFromId(players[i])
         if xPlayer then
             local currentMoney = xPlayer.getMoney()
-            if xPlayer.getAccount('bank').money >= getAmountToDeduct(xPlayer) then
-                xPlayer.removeAccountMoney('bank', getAmountToDeduct(xPlayer))
-                ServerNotify(players[i], 'Dir wurden ' .. getAmountToDeduct(xPlayer) .. '€ vom Konto abgebucht.', 'info', 5000)
-            else
-                ServerNotify(players[i], 'Du hast nicht genügend Geld auf dem Konto, um deine Versicherungen zu zahlen. (' .. getAmountToDeduct(xPlayer) .. '€)', 'error', 10000)
+            if getAmountToDeduct(xPlayer) > 0 then
+                if xPlayer.getAccount('bank').money >= getAmountToDeduct(xPlayer) then
+                    xPlayer.removeAccountMoney('bank', getAmountToDeduct(xPlayer))
+                    ServerNotify(players[i], 'Dir wurden ' .. getAmountToDeduct(xPlayer) .. '€ vom Konto abgebucht.', 'info', 5000)
+                else
+                    ServerNotify(players[i], 'Du hast nicht genügend Geld auf dem Konto, um deine Versicherungen zu zahlen. (' .. getAmountToDeduct(xPlayer) .. '€)', 'error', 10000)
+                end
             end
         end
     end

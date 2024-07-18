@@ -56,17 +56,6 @@ RegisterNUICallback('setInsurance', function(data, cb)
     cb(set)
 end)
 
-Citizen.CreateThread(function ()
-    while not ESX.IsPlayerLoaded() do
-        Wait(100)
-    end
-
-    SendNuiMessage({
-        type = 'color',
-        color = Config.Color
-    })
-end)
-
 function createBlip()
     -- Erstelle den Blip
     local blip = AddBlipForCoord(Config.Blip.coords.x, Config.Blip.coords.y, Config.Blip.coords.z)

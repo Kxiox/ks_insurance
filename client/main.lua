@@ -49,10 +49,10 @@ RegisterNUICallback('close', function(data, cb)
     cb('ok')
 end)
 
-RegisterNUICallback('getButtons', function(data, cb)
-    
+RegisterNUICallback('setInsurance', function(data, cb)
+    local set = lib.callback.await('ks_insurance:setInsurances', false, data.type, data.id)
 
-    cb('ok')
+    cb(set)
 end)
 
 Citizen.CreateThread(function ()
@@ -60,7 +60,6 @@ Citizen.CreateThread(function ()
         Wait(100)
     end
 
-    print('Test')
     SendNuiMessage({
         type = 'color',
         color = Config.Color

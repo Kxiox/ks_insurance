@@ -10,13 +10,12 @@ window.addEventListener('message', (event) => {
 });
 
 function setButtons(insurances) {
-    console.log(insurances)
-    if (insurances[0].kfz == 1) {
+    if (insurances[0].car == 1) {
         $('#car').removeClass('btn_anmelden').addClass('btn_abmelden');
         $('#car').html('Abmelden');
     }
 
-    if (insurances[0].health == 1) {
+    if (insurances[0].krank == 1) {
         $('#krank').removeClass('btn_anmelden').addClass('btn_abmelden');
         $('#krank').html('Abmelden');
     }
@@ -82,6 +81,62 @@ function showSlides(index) {
     });
 }
 
+function triggerButton(type, id) {
+    if (type.includes('btn_anmelden')) {
+        $('#' + id).addClass('btn_abmelden').removeClass('btn_anmelden');
+        $('#' + id).html('Abmelden');
+
+        fetch(`https://${GetParentResourceName()}/setInsurance`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json; charset=UTF-8',
+            },
+            body: JSON.stringify({
+                type: type,
+                id: id
+            })
+        }).then(resp => resp.json()).then(resp => console.log(resp));
+    } else if (type.includes('btn_abmelden')) {
+        $('#' + id).addClass('btn_anmelden').removeClass('btn_abmelden');
+        $('#' + id).html('Anmelden');
+
+        fetch(`https://${GetParentResourceName()}/setInsurance`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json; charset=UTF-8',
+            },
+            body: JSON.stringify({
+                type: type,
+                id: id
+            })
+        }).then(resp => resp.json()).then(resp => console.log(resp));
+    }
+}
+
 $('.btn').click(function (e) { 
     close()
+});
+
+$('#car').click(function (e) { 
+    triggerButton($('#car').attr('class'), 'car');
+});
+
+$('#krank').click(function (e) { 
+    triggerButton($('#krank').attr('class'), 'krank');
+});
+
+$('#haft').click(function (e) { 
+    triggerButton($('#haft').attr('class'), 'haft');  
+});
+
+$('#wohn').click(function (e) { 
+    triggerButton($('#wohn').attr('class'), 'wohn');  
+});
+
+$('#beruf').click(function (e) { 
+    triggerButton($('#beruf').attr('class'), 'beruf');  
+});
+
+$('#recht').click(function (e) { 
+    triggerButton($('#recht').attr('class'), 'recht');  
 });

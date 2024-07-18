@@ -67,3 +67,21 @@ Citizen.CreateThread(function ()
     })
 end)
 
+function createBlip()
+    -- Erstelle den Blip
+    local blip = AddBlipForCoord(Config.Blip.coords.x, Config.Blip.coords.y, Config.Blip.coords.z)
+
+    -- Setze die Blip-Eigenschaften
+    SetBlipSprite(blip, Config.Blip.sprite)
+    SetBlipDisplay(blip, 6)
+    SetBlipScale(blip, Config.Blip.scale)
+    SetBlipColour(blip, Config.Blip.color)
+    SetBlipAsShortRange(blip, true)
+
+    -- Setze den Blip-Text
+    BeginTextCommandSetBlipName("STRING")
+    AddTextComponentSubstringPlayerName(Config.Blip.text)
+    EndTextCommandSetBlipName(blip)
+end
+
+createBlip()

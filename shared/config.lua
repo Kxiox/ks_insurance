@@ -15,6 +15,14 @@ Config.Marker = {
     color = { r = 0, g = 255, b = 0, a = 200 }
 }
 
+Config.Blip = {
+    coords = {x = -318.9953, y = -609.8325, z = 32.5582},
+    sprite = 487,
+    scale = 1.0,
+    color = 2,
+    text = 'Versicherung'
+}
+
 Config.TextUI = {
     text = "[E] - Versicherung",
     icon = 'file-invoice', -- https://fontawesome.com/search?o=r&m=free

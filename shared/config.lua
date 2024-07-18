@@ -1,7 +1,7 @@
 Config = {}
 
-Config.Color = '#00de09' -- hexcode
-Config.Background = 'linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,13,1,1) 58%, rgba(0,29,1,1)100%)' -- https://cssgradient.io/
+Config.Color = '#00de09'
+Config.Background = 'linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,13,1,0.9) 58%, rgba(0,29,1,0.9)100%)'
 Config.Target = false -- using ox_target?
 
 Config.DeductionInterval = 60000 * 1 -- every hour server is remove money

@@ -4,6 +4,9 @@ Config.Color = '#00de09' -- hexcode
 Config.Background = 'linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,13,1,0.9) 58%, rgba(0,29,1,0.9)100%)' -- https://cssgradient.io/
 Config.Target = false -- using ox_target?
 
+Config.Command = 'versicherungen'
+Config.CommandHelp = 'Öffnet das Versicherungsmenü'
+
 Config.Marker = {
     coords = vector3(-318.9953, -609.8325, 32.5582),
     type = 1,
@@ -20,6 +23,10 @@ Config.TextUI = {
     }
 }
 
+Config.Menu = {
+    title = 'Versicherungen'
+}
+
 Config.Prices = {
     currency = '€',
     car = 1000,
@@ -29,3 +36,13 @@ Config.Prices = {
     beruf = 1000,
     recht = 1000
 }
+
+function Notify(text, type, time)
+    lib.notify({
+        title = 'Versicherung',
+        description = text,
+        type = type,
+        duration = time,
+        position = 'top'
+    })
+end

@@ -33,3 +33,7 @@ exports('removeInsurance', function (targetsource, insurance)
         xPlayer.getIdentifier()
     })
 end)
+
+exports('openSelfMenu', function (targetsource)
+    openSelfMenu(targetsource)
+end)

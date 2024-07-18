@@ -1,6 +1,42 @@
-lib.addCommand('versicherungen', {
-    help = 'Öffnet das Versicherungsmenü',
+lib.addCommand(Config.Command, {
+    help = Config.CommandHelp,
 
 }, function (source, args, raw)
-    
+    local xPlayer = ESX.GetPlayerFromId(source)
+
+    local insurances = MySQL.rawExecute.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
+        xPlayer.getIdentifier()
+    })
+
+    if json.encode(insurances) == '[]' then
+        local id = MySQL.insert.await('INSERT INTO `ks_insurance` (identifier, car, krank, haft, wohn, beruf, recht) VALUES (?, 0, 0, 0, 0, 0, 0)', {
+            xPlayer.getIdentifier()
+        })
+    end
+
+    local insurances = MySQL.rawExecute.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
+        xPlayer.getIdentifier()
+    })
+
+    TriggerClientEvent('ks_insurance:openSelfMenu', source, insurances)
 end)
+
+function openSelfMenu(targetsource)
+    local xPlayer = ESX.GetPlayerFromId(targetsource)
+
+    local insurances = MySQL.rawExecute.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
+        xPlayer.getIdentifier()
+    })
+
+    if json.encode(insurances) == '[]' then
+        local id = MySQL.insert.await('INSERT INTO `ks_insurance` (identifier, car, krank, haft, wohn, beruf, recht) VALUES (?, 0, 0, 0, 0, 0, 0)', {
+            xPlayer.getIdentifier()
+        })
+    end
+
+    local insurances = MySQL.rawExecute.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
+        xPlayer.getIdentifier()
+    })
+
+    TriggerClientEvent('ks_insurance:openSelfMenu', targetsource, insurances)
+end

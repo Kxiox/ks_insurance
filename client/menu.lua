@@ -26,7 +26,7 @@ AddEventHandler('ks_insurance:openSelfMenu', function (insurances)
                 else
                     lib.callback('ks_insurance:openMenuPlayer', false, function (targetname)
                         Notify('Du zeigst ' .. targetname .. ' deine Versicherungen.', 'success', 5000)
-                    end, insurances, closestPlayer)    
+                    end, insurances, GetPlayerServerId(closestPlayer))    
                 end
 
             end

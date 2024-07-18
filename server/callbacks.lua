@@ -39,3 +39,11 @@ lib.callback.register('ks_insurance:setInsurances', function (source, type, id)
         if affectedRows then return nil end
     end
 end)
+
+lib.callback.register('ks_insurance:openMenuPlayer', function (source, insurances, target)
+    local xTarget = ESX.GetPlayerFromId(target)
+
+    TriggerClientEvent('ks_insurance:openMenuPlayer', target, insurances)
+
+    return xTarget.getName()
+end)

@@ -2,6 +2,7 @@ Config = {}
 
 Config.Color = '#00de09' -- hexcode
 Config.Background = 'linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,13,1,0.9) 58%, rgba(0,29,1,0.9)100%)' -- https://cssgradient.io/
+Config.Target = false -- using ox_target?
 
 Config.Marker = {
     coords = vector3(-318.9953, -609.8325, 32.5582),
@@ -20,10 +21,11 @@ Config.TextUI = {
 }
 
 Config.Prices = {
-    kfz = 1000,
+    currency = '€',
+    car = 1000,
     krank = 1000,
-    haftpflicht = 1000,
-    wohngebaeude = 1000,
-    berufsunfaehigkeit = 1000,
-    rechtsschutz = 1000
+    haft = 1000,
+    wohn = 1000,
+    beruf = 1000,
+    recht = 1000
 }

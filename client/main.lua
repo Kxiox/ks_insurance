@@ -29,7 +29,8 @@ function point:nearby()
                 type = 'open',
                 color = Config.Color,
                 background = Config.Background,
-                insurances = insurances
+                insurances = insurances,
+                prices = Config.Prices
             })
 
             SetNuiFocus(true, true)
@@ -65,3 +66,4 @@ Citizen.CreateThread(function ()
         color = Config.Color
     })
 end)
+

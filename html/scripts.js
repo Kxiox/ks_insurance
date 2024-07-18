@@ -1,7 +1,8 @@
 window.addEventListener('message', (event) => {
     if (event.data.type === 'open') {
         changeColor(event.data.color, event.data.background)
-        setButtons(event.data.insurances)        
+        setButtons(event.data.insurances)
+        setPrices(event.data.prices)    
         $('body').fadeIn();
         $('body').css('display', 'flex');
     } if (event.data.type === 'close') {
@@ -79,6 +80,15 @@ function showSlides(index) {
     slides.forEach((slide, i) => {
         slide.style.transform = `translateX(${(i - slideIndex) * 100}%)`;
     });
+}
+
+function setPrices(prices) {
+    $('#price_car').html(prices.car + prices.currency);
+    $('#price_krank').html(prices.krank + prices.currency);
+    $('#price_haft').html(prices.haft + prices.currency);
+    $('#price_wohn').html(prices.wohn + prices.currency);
+    $('#price_beruf').html(prices.beruf + prices.currency);
+    $('#price_recht').html(prices.recht + prices.currency);
 }
 
 function triggerButton(type, id) {

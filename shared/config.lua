@@ -4,6 +4,8 @@ Config.Color = '#00de09' -- hexcode
 Config.Background = 'linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,13,1,0.9) 58%, rgba(0,29,1,0.9)100%)' -- https://cssgradient.io/
 Config.Target = false -- using ox_target?
 
+Config.DeductionInterval = 60000 * 60 -- every hour server is remove money
+
 Config.Command = 'versicherungen'
 Config.CommandHelp = 'Öffnet das Versicherungsmenü'
 
@@ -39,6 +41,16 @@ Config.Prices = {
 
 function Notify(text, type, time)
     lib.notify({
+        title = 'Versicherung',
+        description = text,
+        type = type,
+        duration = time,
+        position = 'top'
+    })
+end
+
+function ServerNotify(source, text, type, time)
+    TriggerClientEvent('ox_lib:notify', source, {
         title = 'Versicherung',
         description = text,
         type = type,

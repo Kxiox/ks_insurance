@@ -8,6 +8,7 @@ Config.DeductionInterval = 60000 * 1 -- every hour server is remove money
 
 Config.Command = 'versicherungen'
 Config.CommandHelp = 'Öffnet das Versicherungsmenü'
+Config.CommandLib = true -- using ox_lib for command?
 
 Config.Marker = {
     coords = vector3(-318.9953, -609.8325, 32.5582),

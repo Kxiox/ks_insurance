@@ -74,3 +74,7 @@ function createBlip()
 end
 
 createBlip()
+
+if not Config.CommandLib then
+    TriggerEvent('chat:addSuggestion', '/' .. Config.Command, Config.CommandHelp)
+end

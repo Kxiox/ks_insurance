@@ -10,8 +10,10 @@ Config.Command = 'versicherungen'
 Config.CommandHelp = 'Öffnet das Versicherungsmenü'
 Config.CommandLib = true -- using ox_lib for command?
 
+Config.MarkerLib = true -- using ox_lib for marker?
 Config.Marker = {
     coords = vector3(-318.9953, -609.8325, 32.5582),
+    size = { x = 2.0, y = 2.0, z = 1.0 }, -- y the same like x if u use ox_lib
     type = 1,
     color = { r = 0, g = 255, b = 0, a = 200 }
 }
@@ -66,4 +68,8 @@ function ServerNotify(source, text, type, time)
         duration = time,
         position = 'top'
     })
+end
+
+function HelpNotify() -- help notify if Config.MarkerLib = false
+    ESX.ShowHelpNotification('Drücke ~INPUT_CONTEXT~ um das Menü zu öffnen.')
 end

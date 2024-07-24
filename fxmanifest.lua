@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'Kxiox'
 description 'Insurance script - Kxiox Scripts'
-version '1.1'
+version '1.2'
 
 lua54 'yes'
 

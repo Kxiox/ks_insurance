@@ -2,7 +2,6 @@ ESX = exports.es_extended:getSharedObject()
 
 -- Funktion zum Abziehen des Geldes
 function deductMoneyFromPlayers()
-    print(21)
     local players = ESX.GetPlayers()
     for i=1, #players, 1 do
         local xPlayer = ESX.GetPlayerFromId(players[i])

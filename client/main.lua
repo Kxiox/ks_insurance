@@ -33,7 +33,8 @@ if Config.MarkerLib then
                     color = Config.Color,
                     background = Config.Background,
                     insurances = insurances,
-                    prices = Config.Prices
+                    prices = Config.Prices,
+                    enabled_insurances = Config.Insurances
                 })
     
                 SetNuiFocus(true, true)

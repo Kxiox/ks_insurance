@@ -1,5 +1,7 @@
 ESX = exports.es_extended:getSharedObject()
 
+local lang = Config.Locale
+
 -- Funktion zum Abziehen des Geldes
 function deductMoneyFromPlayers()
     local players = ESX.GetPlayers()
@@ -10,9 +12,9 @@ function deductMoneyFromPlayers()
             if getAmountToDeduct(xPlayer) > 0 then
                 if xPlayer.getAccount('bank').money >= getAmountToDeduct(xPlayer) then
                     xPlayer.removeAccountMoney('bank', getAmountToDeduct(xPlayer))
-                    ServerNotify(players[i], 'Dir wurden ' .. getAmountToDeduct(xPlayer) .. '€ vom Konto abgebucht.', 'info', 5000)
+                    ServerNotify(players[i], string.format(Locales[lang]['removed_money'], getAmountToDeduct(xPlayer)), 'info', 5000)
                 else
-                    ServerNotify(players[i], 'Du hast nicht genügend Geld auf dem Konto, um deine Versicherungen zu zahlen. (' .. getAmountToDeduct(xPlayer) .. '€)', 'error', 10000)
+                    ServerNotify(players[i], string.format(Locales[lang]['cant_remove_money'], getAmountToDeduct(xPlayer)), 'error', 10000)
                 end
             end
         end

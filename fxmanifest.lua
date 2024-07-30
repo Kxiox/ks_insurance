@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'Kxiox'
 description 'Insurance script - Kxiox Scripts'
-version '1.2'
+version '1.3'
 
 lua54 'yes'
 
@@ -19,6 +19,7 @@ server_scripts {
 shared_scripts {
     '@es_extended/imports.lua',
     '@ox_lib/init.lua',
+    'shared/locales.lua',
     'shared/config.lua'
 }
 

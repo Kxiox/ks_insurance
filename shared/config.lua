@@ -40,7 +40,8 @@ Config.TextUI = {
 
 Config.MenuLib = true -- using ox_lib for menu? false = esx menu
 Config.Menu = {
-    title = 'Versicherungen'
+    title = 'Versicherungen',
+    position = 'top-left' -- menu position if Config.MenuLib false
 }
 
 Config.Insurances = {

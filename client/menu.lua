@@ -199,7 +199,7 @@ else
   
       ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'sub_insurance_selfmenu', {
           title = Config.Menu.title,
-          align = 'top-left',
+          align = Config.Menu.position,
           elements = elements
       }, function(data, menu)
           -- You can add additional logic here for submenu actions if needed

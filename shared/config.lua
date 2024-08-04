@@ -12,7 +12,7 @@ Config.Command = 'versicherungen'
 Config.CommandHelp = 'Öffnet das Versicherungsmenü'
 Config.CommandLib = true -- using ox_lib for command?
 
-Config.MarkerLib = false -- using ox_lib for marker?
+Config.MarkerLib = true -- using ox_lib for marker?
 Config.Marker = {
     coords = vector3(-318.9953, -609.8325, 32.5582),
     size = { x = 2.0, y = 2.0, z = 1.0 }, -- y the same like x if u use ox_lib

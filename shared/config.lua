@@ -4,7 +4,7 @@ Config.Locale = 'de'
 
 Config.Color = '#00de09'
 Config.Background = 'linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,13,1,0.9) 58%, rgba(0,29,1,0.9)100%)'
-Config.Target = false -- using ox_target?
+Config.Target = false -- using ox_target? (not working currently)
 
 Config.DeductionInterval = 60000 * 60 -- every hour server is remove money
 

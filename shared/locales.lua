@@ -2,6 +2,7 @@ Locales = {
     ['de'] = {
         -- Insurances
         ['insurance_car'] = 'Fahrzeugversicherung',
+        ['insurance_cars'] = 'Fahrzeugversicherungen',
         ['insurance_krank'] = 'Krankenversicherung',
         ['insurance_haft'] = 'Haftpflichtversicherung',
         ['insurance_wohn'] = 'Wohngebäudeversicherung',
@@ -9,6 +10,18 @@ Locales = {
         ['insurance_recht'] = 'Rechtsschutzversicherung',
 
         -- Menu
+        ['main_menu_title'] = 'Versicherungen',
+        ['main_menu_manage_title'] = 'Versicherungen verwalten',
+        ['main_menu_vehicles_title'] = 'Fahrzeugversicherungen verwalten',
+
+        ['vehicle_menu_title'] = 'Fahrzeuge',
+        ['vehicle_menu_description'] = 'Klicke, um das Fahrzeug bei der Versicherung an/abzumelden.',
+
+        ['price_per_vehicle'] = 'Kosten pro Fahrzeug: %s€',
+        ['vehicle_added'] = 'Das Fahrzeug mit dem Kennzeichen %s ist nun angemeldet.',
+        ['vehicle_removed'] = 'Das Fahrzeug mit dem Kennzeichen %s ist nun abgemeldet.',
+        ['vehicle_error'] = 'Es ist ein Fehler aufgetreten.',
+
         ['menu_showself_title'] = 'Versicherungen ansehen',
         ['menu_showself_desc'] = 'Sehe dir deine Versicherungen an.',
 

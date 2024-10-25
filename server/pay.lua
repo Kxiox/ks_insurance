@@ -43,6 +43,16 @@ function getAmountToDeduct(xPlayer)
         xPlayer.getIdentifier()
     })
 
+    local vehicles = MySQL.query.await('SELECT * FROM `owned_vehicles` WHERE `owner` = ?', {
+        xPlayer.getIdentifier()
+    })
+
+    local amountveh = 0
+
+    for k, v in pairs(vehicles) do
+        if v.insurance == 1 then amountveh = amountveh + Config.Vehicles.price end
+    end
+
     if insurances[1] then
         local insurance = insurances[1]
         amount = (insurance.car * Config.Prices.car) + 
@@ -50,7 +60,8 @@ function getAmountToDeduct(xPlayer)
                  (insurance.haft * Config.Prices.haft) + 
                  (insurance.wohn * Config.Prices.wohn) + 
                  (insurance.beruf * Config.Prices.beruf) + 
-                 (insurance.recht * Config.Prices.recht)
+                 (insurance.recht * Config.Prices.recht) +
+                 amountveh
     end
 
     return amount

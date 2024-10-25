@@ -4,7 +4,6 @@ Config.Locale = 'de'
 
 Config.Color = '#00de09'
 Config.Background = 'linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,13,1,0.9) 58%, rgba(0,29,1,0.9)100%)'
-Config.Target = false -- using ox_target? (not working currently)
 
 Config.DeductionInterval = 60000 * 60 -- every hour server is remove money
 
@@ -63,6 +62,11 @@ Config.Prices = {
     recht = 1000
 }
 
+Config.Vehicles = {
+    enabled = true, -- use insurance for every different vehicle (default car insurance will be deactivate)
+    price = 100 -- price per vehicle
+}
+
 function Notify(text, type, time)
     lib.notify({
         title = 'Versicherung',
@@ -86,3 +90,9 @@ end
 function HelpNotify() -- help notify if Config.MarkerLib = false
     ESX.ShowHelpNotification('Drücke ~INPUT_CONTEXT~ um das Menü zu öffnen.')
 end
+
+function CreateInsuranceList() -- server side (will trigger after first time open the insurance ui)
+    --TriggerServerEvent('ak4y-battlepass:taskCountAdd:standart', 7, 1)
+end
+
+if Config.Vehicles.enabled then Config.Insurances.car = false Config.Prices.car = 0 end

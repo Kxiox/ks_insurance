@@ -9,3 +9,10 @@ CREATE TABLE IF NOT EXISTS `ks_insurance` (
   `recht` int(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+
+-- ONLY IMPORT THIS IF YOU HAVE Config.Vehicles.enabled ON TRUE
+
+ALTER TABLE `owned_vehicles` ADD `insurance` INT(1) NOT NULL DEFAULT 0;
+
+UPDATE ks_insurance SET car = 0

@@ -28,16 +28,20 @@ if Config.MarkerLib then
             if IsControlJustPressed(0, 51) then
                 local insurances = lib.callback.await('ks_insurance:getInsurances', false)
     
-                SendNUIMessage({
-                    type = 'open',
-                    color = Config.Color,
-                    background = Config.Background,
-                    insurances = insurances,
-                    prices = Config.Prices,
-                    enabled_insurances = Config.Insurances
-                })
-    
-                SetNuiFocus(true, true)
+                if Config.Vehicles.enabled then
+                    TriggerEvent('ks_insurance:openMainMenu', insurances)
+                else
+                    SendNUIMessage({
+                        type = 'open',
+                        color = Config.Color,
+                        background = Config.Background,
+                        insurances = insurances,
+                        prices = Config.Prices,
+                        enabled_insurances = Config.Insurances
+                    })
+        
+                    SetNuiFocus(true, true)
+                end
             end
         else
             lib.hideTextUI()

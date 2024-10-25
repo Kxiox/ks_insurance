@@ -77,3 +77,15 @@ end)
 exports('openSelfMenu', function (targetsource)
     openSelfMenu(targetsource)
 end)
+
+exports('addVehicle', function (plate)
+    local affectedRows = MySQL.update.await('UPDATE owned_vehicles SET insurance = 1 WHERE plate = ?', {
+        plate
+    })
+end)
+
+exports('removeVehicle', function (plate)
+    local affectedRows = MySQL.update.await('UPDATE owned_vehicles SET insurance = 0 WHERE plate = ?', {
+        plate
+    })
+end)

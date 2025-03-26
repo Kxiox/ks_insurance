@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'Kxiox'
 description 'Insurance script - Kxiox Scripts'
-version '1.4'
+version '1.4.1'
 
 lua54 'yes'
 
@@ -39,5 +39,5 @@ files {
 }
 
 escrow_ignore {
-    'shared/config.lua'
+    'shared/*.lua'
 }

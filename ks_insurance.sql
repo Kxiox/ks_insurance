@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS `ks_insurance` (
   `beruf` int(1) NOT NULL DEFAULT 0,
   `recht` int(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 
 -- ONLY IMPORT THIS IF YOU HAVE Config.Vehicles.enabled ON TRUE

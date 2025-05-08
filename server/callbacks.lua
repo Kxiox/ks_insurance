@@ -3,7 +3,7 @@ ESX = exports.es_extended:getSharedObject()
 lib.callback.register('ks_insurance:getInsurances', function ()
     local xPlayer = ESX.GetPlayerFromId(source)
 
-    local insurances = MySQL.rawExecute.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
+    local insurances = MySQL.query.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
         xPlayer.getIdentifier()
     })
 
@@ -15,7 +15,7 @@ lib.callback.register('ks_insurance:getInsurances', function ()
         CreateInsuranceList()
     end
 
-    local insurances = MySQL.rawExecute.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
+    local insurances = MySQL.query.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
         xPlayer.getIdentifier()
     })
 
@@ -25,14 +25,20 @@ end)
 lib.callback.register('ks_insurance:setInsurances', function (source, type, id)
     local xPlayer = ESX.GetPlayerFromId(source)
 
+    if id ~= 'car' or 'krank' or 'haft' or 'wohn' or 'beruf' or 'recht' then
+        return false
+    end
+
     if type == 'btn_anmelden' then
-        local affectedRows = MySQL.update.await('UPDATE ks_insurance SET ' .. id .. ' = 1 WHERE identifier = ?', {
+        local affectedRows = MySQL.update.await('UPDATE ks_insurance SET ? = 1 WHERE identifier = ?', {
+            id,
             xPlayer.getIdentifier()
         })
 
         if affectedRows then return 1 end
     elseif type == 'btn_abmelden' then
-        local affectedRows = MySQL.update.await('UPDATE ks_insurance SET ' .. id .. ' = 0 WHERE identifier = ?', {
+        local affectedRows = MySQL.update.await('UPDATE ks_insurance SET ? = 0 WHERE identifier = ?', {
+            id,
             xPlayer.getIdentifier()
         })
 

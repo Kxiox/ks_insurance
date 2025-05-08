@@ -6,7 +6,7 @@ if Config.CommandLib then
     }, function (source, args, raw)
         local xPlayer = ESX.GetPlayerFromId(source)
 
-        local insurances = MySQL.rawExecute.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
+        local insurances = MySQL.query.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
             xPlayer.getIdentifier()
         })
 
@@ -16,7 +16,7 @@ if Config.CommandLib then
             })
         end
 
-        local insurances = MySQL.rawExecute.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
+        local insurances = MySQL.query.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
             xPlayer.getIdentifier()
         })
 
@@ -27,7 +27,7 @@ else
     RegisterCommand(Config.Command, function(source, args, raw)
         local xPlayer = ESX.GetPlayerFromId(source)
 
-        local insurances = MySQL.rawExecute.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
+        local insurances = MySQL.query.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
             xPlayer.getIdentifier()
         })
 
@@ -37,7 +37,7 @@ else
             })
         end
 
-        local insurances = MySQL.rawExecute.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
+        local insurances = MySQL.query.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
             xPlayer.getIdentifier()
         })
 
@@ -48,7 +48,7 @@ end
 function openSelfMenu(targetsource)
     local xPlayer = ESX.GetPlayerFromId(targetsource)
 
-    local insurances = MySQL.rawExecute.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
+    local insurances = MySQL.query.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
         xPlayer.getIdentifier()
     })
 
@@ -58,7 +58,7 @@ function openSelfMenu(targetsource)
         })
     end
 
-    local insurances = MySQL.rawExecute.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
+    local insurances = MySQL.query.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
         xPlayer.getIdentifier()
     })
 

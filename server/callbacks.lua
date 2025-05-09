@@ -3,21 +3,20 @@ ESX = exports.es_extended:getSharedObject()
 lib.callback.register('ks_insurance:getInsurances', function ()
     local xPlayer = ESX.GetPlayerFromId(source)
 
-    local insurances = MySQL.query.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
+    ::select::
+    local insurances = MySQL.single.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
         xPlayer.getIdentifier()
     })
 
-    if json.encode(insurances) == '[]' then
+    if not insurances then
         local id = MySQL.insert.await('INSERT INTO `ks_insurance` (identifier, car, krank, haft, wohn, beruf, recht) VALUES (?, 0, 0, 0, 0, 0, 0)', {
             xPlayer.getIdentifier()
         })
 
         CreateInsuranceList()
+        
+        goto select
     end
-
-    local insurances = MySQL.query.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
-        xPlayer.getIdentifier()
-    })
 
     return insurances
 end)
@@ -25,7 +24,7 @@ end)
 lib.callback.register('ks_insurance:setInsurances', function (source, type, id)
     local xPlayer = ESX.GetPlayerFromId(source)
 
-    if id ~= 'car' or 'krank' or 'haft' or 'wohn' or 'beruf' or 'recht' then
+    if id ~= 'car' and id ~= 'krank' and id ~= 'haft' and id ~= 'wohn' and id ~= 'beruf' and id ~= 'recht' then
         return false
     end
 
@@ -53,22 +52,22 @@ lib.callback.register('ks_insurance:openMenuPlayer', function (source, insurance
     local xTarget = ESX.GetPlayerFromId(target)
 
     if Config.Vehicles.enabled then
-        local response = MySQL.query.await('SELECT * FROM `owned_vehicles` WHERE `owner` = ?', {
+        local response = MySQL.query.await('SELECT `plate`, `insurance` FROM `owned_vehicles` WHERE `owner` = ?', {
             xPlayer.getIdentifier()
         })
 
         TriggerClientEvent('ks_insurance:openMenuPlayer', target, insurances, response)
-        return xTarget.getName()
     else
         TriggerClientEvent('ks_insurance:openMenuPlayer', target, insurances)
-        return xTarget.getName()
     end
+
+    return xTarget.getName()
 end)
 
 lib.callback.register('ks_insurance:getPlayerVehicles', function (source)
     local xPlayer = ESX.GetPlayerFromId(source)
 
-    local response = MySQL.query.await('SELECT * FROM `owned_vehicles` WHERE `owner` = ?', {
+    local response = MySQL.query.await('SELECT `plate`, `insurance` FROM `owned_vehicles` WHERE `owner` = ?', {
         xPlayer.getIdentifier()
     })
 

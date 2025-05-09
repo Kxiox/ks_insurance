@@ -11,7 +11,8 @@ exports('addInsurance', function (targetsource, insurance)
         })
     end
 
-    local affectedRows = MySQL.update.await('UPDATE ks_insurance SET ' .. insurance .. ' = 1 WHERE identifier = ?', {
+    local affectedRows = MySQL.update.await('UPDATE ks_insurance SET ? = 1 WHERE identifier = ?', {
+        insurance,
         xPlayer.getIdentifier()
     })
 end)
@@ -29,7 +30,8 @@ exports('removeInsurance', function (targetsource, insurance)
         })
     end
 
-    local affectedRows = MySQL.update.await('UPDATE ks_insurance SET ' .. insurance .. ' = 0 WHERE identifier = ?', {
+    local affectedRows = MySQL.update.await('UPDATE ks_insurance SET ? = 0 WHERE identifier = ?', {
+        insurance,
         xPlayer.getIdentifier()
     })
 end)
@@ -67,7 +69,8 @@ exports('getInsuranceType', function (targetsource, type)
         })
     end
 
-    local insurances = MySQL.rawExecute.await('SELECT `' .. type .. '` FROM `ks_insurance` WHERE `identifier` = ?', {
+    local insurances = MySQL.rawExecute.await('SELECT ? FROM `ks_insurance` WHERE `identifier` = ?', {
+        type,
         xPlayer.getIdentifier()
     })
 

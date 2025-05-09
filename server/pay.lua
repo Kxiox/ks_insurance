@@ -29,7 +29,7 @@ ESX.SetTimeout(Config.DeductionInterval, deductMoneyFromPlayers)
 function getAmountToDeduct(xPlayer)
     local amount = 0
 
-    local insurances = MySQL.rawExecute.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
+    local insurances = MySQL.query.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
         xPlayer.getIdentifier()
     })
 
@@ -39,7 +39,7 @@ function getAmountToDeduct(xPlayer)
         })
     end
 
-    local insurances = MySQL.rawExecute.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
+    local insurances = MySQL.query.await('SELECT `car`, `krank`, `haft`, `wohn`, `beruf`, `recht` FROM `ks_insurance` WHERE `identifier` = ?', {
         xPlayer.getIdentifier()
     })
 

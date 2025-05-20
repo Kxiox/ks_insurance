@@ -26,5 +26,5 @@
 * Berufsunfähigkeitsversicherung
 * Rechtsschutzversicherung
 
-## :arrow_down: [Download](https://github.com/Kxiox/ks_insurance)
+## :arrow_down: [Download](https://github.com/Kxiox/ks_insurance/archive/refs/heads/main.zip)
 ## :green_book: [Dokumentation](https://kxiox.gitbook.io/kxiox-scripts/ks_insurance/)

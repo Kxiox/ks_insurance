@@ -1,1 +1,181 @@
-const _0x2040e6=_0x47f8;(function(_0x110ffa,_0x58fb0a){const _0x1ee5f3=_0x47f8,_0x35f3c0=_0x110ffa();while(!![]){try{const _0x57e878=parseInt(_0x1ee5f3(0x179))/0x1+parseInt(_0x1ee5f3(0x18e))/0x2*(-parseInt(_0x1ee5f3(0x15b))/0x3)+-parseInt(_0x1ee5f3(0x153))/0x4*(-parseInt(_0x1ee5f3(0x18a))/0x5)+parseInt(_0x1ee5f3(0x17b))/0x6+parseInt(_0x1ee5f3(0x157))/0x7+parseInt(_0x1ee5f3(0x173))/0x8*(-parseInt(_0x1ee5f3(0x167))/0x9)+-parseInt(_0x1ee5f3(0x184))/0xa;if(_0x57e878===_0x58fb0a)break;else _0x35f3c0['push'](_0x35f3c0['shift']());}catch(_0x29b801){_0x35f3c0['push'](_0x35f3c0['shift']());}}}(_0x1e4d,0x3ea94),window[_0x2040e6(0x183)]('message',_0x3bc920=>{const _0x2f2836=_0x2040e6;if(_0x3bc920[_0x2f2836(0x170)][_0x2f2836(0x14e)]===_0x2f2836(0x17e)){changeColor(_0x3bc920[_0x2f2836(0x170)][_0x2f2836(0x164)],_0x3bc920[_0x2f2836(0x170)]['background']),setButtons(_0x3bc920[_0x2f2836(0x170)][_0x2f2836(0x14b)]),setPrices(_0x3bc920['data'][_0x2f2836(0x195)]),setInsurances(_0x3bc920[_0x2f2836(0x170)][_0x2f2836(0x156)]);let _0x59dc3b=0x0;showSlides(_0x59dc3b),$(_0x2f2836(0x194))[_0x2f2836(0x192)](),$(_0x2f2836(0x194))['css'](_0x2f2836(0x148),_0x2f2836(0x177));}_0x3bc920[_0x2f2836(0x170)]['type']===_0x2f2836(0x14a)&&$('body')[_0x2f2836(0x166)]();}));function setButtons(_0x10232c){const _0x2301e9=_0x2040e6;_0x10232c[0x0][_0x2301e9(0x185)]==0x1&&($(_0x2301e9(0x193))['removeClass']('btn_anmelden')['addClass'](_0x2301e9(0x158)),$(_0x2301e9(0x193))[_0x2301e9(0x14c)](_0x2301e9(0x150))),_0x10232c[0x0][_0x2301e9(0x15e)]==0x1&&($(_0x2301e9(0x161))['removeClass']('btn_anmelden')[_0x2301e9(0x182)](_0x2301e9(0x158)),$(_0x2301e9(0x161))[_0x2301e9(0x14c)]('Abmelden')),_0x10232c[0x0][_0x2301e9(0x162)]==0x1&&($(_0x2301e9(0x16d))['removeClass'](_0x2301e9(0x14d))[_0x2301e9(0x182)](_0x2301e9(0x158)),$(_0x2301e9(0x16d))['html'](_0x2301e9(0x150))),_0x10232c[0x0][_0x2301e9(0x16b)]==0x1&&($('#wohn')['removeClass'](_0x2301e9(0x14d))[_0x2301e9(0x182)](_0x2301e9(0x158)),$(_0x2301e9(0x171))[_0x2301e9(0x14c)]('Abmelden')),_0x10232c[0x0][_0x2301e9(0x14f)]==0x1&&($(_0x2301e9(0x174))[_0x2301e9(0x189)](_0x2301e9(0x14d))[_0x2301e9(0x182)](_0x2301e9(0x158)),$(_0x2301e9(0x174))['html']('Abmelden')),_0x10232c[0x0]['recht']==0x1&&($(_0x2301e9(0x172))[_0x2301e9(0x189)](_0x2301e9(0x14d))['addClass'](_0x2301e9(0x158)),$('#recht')[_0x2301e9(0x14c)](_0x2301e9(0x150)));}function changeColor(_0x563409,_0xb65b56){const _0xef613a=_0x2040e6;$(_0xef613a(0x159))[_0xef613a(0x151)](_0xef613a(0x175),_0x563409),$(_0xef613a(0x194))[_0xef613a(0x151)](_0xef613a(0x17a),_0xb65b56);}function _0x47f8(_0x36cb82,_0x1055f9){const _0x1e4df0=_0x1e4d();return _0x47f8=function(_0x47f84a,_0x4631c2){_0x47f84a=_0x47f84a-0x147;let _0x1de412=_0x1e4df0[_0x47f84a];return _0x1de412;},_0x47f8(_0x36cb82,_0x1055f9);}function close(){const _0x313b0a=_0x2040e6;$(_0x313b0a(0x194))[_0x313b0a(0x166)](),fetch(_0x313b0a(0x15d)+GetParentResourceName()+_0x313b0a(0x168));}let slideIndex=0x0;showSlides(slideIndex);function nextSlide(){slideIndex++,showSlides(slideIndex);}function _0x1e4d(){const _0x5dadb6=['197705TVtYLS','includes','log','#card_krank','6yBUkTT','attr','.btn','stringify','fadeIn','#car','body','prices','Anmelden','display','length','close','insurances','html','btn_anmelden','type','beruf','Abmelden','css','currency','28DFZtjY','#card_beruf','#price_haft','enabled_insurances','2389814HmOcpe','btn_abmelden',':root','/setInsurance','10572FyIkir','#price_krank','https://','krank','#card_car','#price_car','#krank','haft','#price_beruf','color','json','fadeOut','7263MJNdfK','/close','#price_wohn','click','wohn','POST','#haft','recht','transform','data','#wohn','#recht','1304dsgfOk','#beruf','--main-color','querySelectorAll','flex','then','66318aKnYZn','background','1877688SzLeii','application/json;\x20charset=UTF-8','#card_recht','open','class','#card_haft','#price_recht','addClass','addEventListener','5986820bNzdkV','car','forEach','translateX(','remove','removeClass'];_0x1e4d=function(){return _0x5dadb6;};return _0x1e4d();}function prevSlide(){slideIndex--,showSlides(slideIndex);}function showSlides(_0x335c6c){const _0x17adc1=_0x2040e6,_0x27f8f9=document[_0x17adc1(0x176)]('.card');_0x335c6c>=_0x27f8f9[_0x17adc1(0x149)]&&(slideIndex=0x0),_0x335c6c<0x0&&(slideIndex=_0x27f8f9['length']-0x1),_0x27f8f9[_0x17adc1(0x186)]((_0x216ff7,_0x2e1ce4)=>{const _0xd72a17=_0x17adc1;_0x216ff7['style'][_0xd72a17(0x16f)]=_0xd72a17(0x187)+(_0x2e1ce4-slideIndex)*0x64+'%)';});}function setPrices(_0x4780f9){const _0x5a1bc8=_0x2040e6;$(_0x5a1bc8(0x160))[_0x5a1bc8(0x14c)](_0x4780f9[_0x5a1bc8(0x185)]+_0x4780f9[_0x5a1bc8(0x152)]),$(_0x5a1bc8(0x15c))[_0x5a1bc8(0x14c)](_0x4780f9[_0x5a1bc8(0x15e)]+_0x4780f9[_0x5a1bc8(0x152)]),$(_0x5a1bc8(0x155))[_0x5a1bc8(0x14c)](_0x4780f9[_0x5a1bc8(0x162)]+_0x4780f9['currency']),$(_0x5a1bc8(0x169))[_0x5a1bc8(0x14c)](_0x4780f9[_0x5a1bc8(0x16b)]+_0x4780f9[_0x5a1bc8(0x152)]),$(_0x5a1bc8(0x163))[_0x5a1bc8(0x14c)](_0x4780f9[_0x5a1bc8(0x14f)]+_0x4780f9[_0x5a1bc8(0x152)]),$(_0x5a1bc8(0x181))[_0x5a1bc8(0x14c)](_0x4780f9[_0x5a1bc8(0x16e)]+_0x4780f9[_0x5a1bc8(0x152)]);}function triggerButton(_0x52d758,_0x3dd7b6){const _0x4d9bd6=_0x2040e6;if(_0x52d758[_0x4d9bd6(0x18b)](_0x4d9bd6(0x14d)))$('#'+_0x3dd7b6)[_0x4d9bd6(0x182)](_0x4d9bd6(0x158))[_0x4d9bd6(0x189)](_0x4d9bd6(0x14d)),$('#'+_0x3dd7b6)[_0x4d9bd6(0x14c)](_0x4d9bd6(0x150)),fetch('https://'+GetParentResourceName()+_0x4d9bd6(0x15a),{'method':_0x4d9bd6(0x16c),'headers':{'Content-Type':'application/json;\x20charset=UTF-8'},'body':JSON[_0x4d9bd6(0x191)]({'type':_0x52d758,'id':_0x3dd7b6})})[_0x4d9bd6(0x178)](_0xdd290c=>_0xdd290c[_0x4d9bd6(0x165)]())[_0x4d9bd6(0x178)](_0x1e9008=>console['log'](_0x1e9008));else _0x52d758[_0x4d9bd6(0x18b)]('btn_abmelden')&&($('#'+_0x3dd7b6)[_0x4d9bd6(0x182)](_0x4d9bd6(0x14d))[_0x4d9bd6(0x189)]('btn_abmelden'),$('#'+_0x3dd7b6)[_0x4d9bd6(0x14c)](_0x4d9bd6(0x147)),fetch('https://'+GetParentResourceName()+'/setInsurance',{'method':_0x4d9bd6(0x16c),'headers':{'Content-Type':_0x4d9bd6(0x17c)},'body':JSON[_0x4d9bd6(0x191)]({'type':_0x52d758,'id':_0x3dd7b6})})[_0x4d9bd6(0x178)](_0x38ff90=>_0x38ff90[_0x4d9bd6(0x165)]())[_0x4d9bd6(0x178)](_0x34c825=>console[_0x4d9bd6(0x18c)](_0x34c825)));}function setInsurances(_0x5e2143){const _0x4158fe=_0x2040e6;_0x5e2143[_0x4158fe(0x185)]==![]&&$(_0x4158fe(0x15f))['remove'](),_0x5e2143[_0x4158fe(0x15e)]==![]&&$(_0x4158fe(0x18d))['remove'](),_0x5e2143['haft']==![]&&$(_0x4158fe(0x180))[_0x4158fe(0x188)](),_0x5e2143['wohn']==![]&&$('#card_wohn')[_0x4158fe(0x188)](),_0x5e2143[_0x4158fe(0x14f)]==![]&&$(_0x4158fe(0x154))[_0x4158fe(0x188)](),_0x5e2143[_0x4158fe(0x16e)]==![]&&$(_0x4158fe(0x17d))[_0x4158fe(0x188)]();}$(_0x2040e6(0x190))['click'](function(_0xb204ec){close();}),$(_0x2040e6(0x193))['click'](function(_0x6c5696){const _0x2dc572=_0x2040e6;triggerButton($(_0x2dc572(0x193))['attr'](_0x2dc572(0x17f)),'car');}),$('#krank')[_0x2040e6(0x16a)](function(_0x39bbc2){triggerButton($('#krank')['attr']('class'),'krank');}),$(_0x2040e6(0x16d))[_0x2040e6(0x16a)](function(_0x34b713){const _0x2489e3=_0x2040e6;triggerButton($(_0x2489e3(0x16d))[_0x2489e3(0x18f)](_0x2489e3(0x17f)),'haft');}),$(_0x2040e6(0x171))[_0x2040e6(0x16a)](function(_0x29c4c9){const _0x598e50=_0x2040e6;triggerButton($(_0x598e50(0x171))['attr'](_0x598e50(0x17f)),_0x598e50(0x16b));}),$('#beruf')[_0x2040e6(0x16a)](function(_0x35b0c2){const _0x38eff2=_0x2040e6;triggerButton($(_0x38eff2(0x174))['attr'](_0x38eff2(0x17f)),_0x38eff2(0x14f));}),$('#recht')['click'](function(_0x44a91a){const _0x3f58e8=_0x2040e6;triggerButton($(_0x3f58e8(0x172))[_0x3f58e8(0x18f)](_0x3f58e8(0x17f)),_0x3f58e8(0x16e));});
+window.addEventListener('message', (event) => {
+    if (event.data.type === 'open') {
+        changeColor(event.data.color, event.data.background)
+        setButtons(event.data.insurances)
+        setPrices(event.data.prices) 
+        setInsurances(event.data.enabled_insurances)
+        let slideIndex = 0;
+        showSlides(slideIndex);
+        $('body').fadeIn();
+        $('body').css('display', 'flex');    
+    } if (event.data.type === 'close') {
+        $('body').fadeOut();
+    }
+});
+
+function setButtons(insurances) {
+    if (insurances['car'] == 1) {
+        $('#car').removeClass('btn_anmelden').addClass('btn_abmelden');
+        $('#car').html('Abmelden');
+    }
+
+    if (insurances['krank'] == 1) {
+        $('#krank').removeClass('btn_anmelden').addClass('btn_abmelden');
+        $('#krank').html('Abmelden');
+    }
+
+    if (insurances['haft'] == 1) {
+        $('#haft').removeClass('btn_anmelden').addClass('btn_abmelden');
+        $('#haft').html('Abmelden');
+    }
+
+    if (insurances['wohn'] == 1) {
+        $('#wohn').removeClass('btn_anmelden').addClass('btn_abmelden');
+        $('#wohn').html('Abmelden');
+    }
+
+    if (insurances['wohn'] == 1) {
+        $('#beruf').removeClass('btn_anmelden').addClass('btn_abmelden');
+        $('#beruf').html('Abmelden');
+    }
+
+    if (insurances['recht'] == 1) {
+        $('#recht').removeClass('btn_anmelden').addClass('btn_abmelden');
+        $('#recht').html('Abmelden');
+    }
+}
+
+function changeColor(color, background) {
+    
+    $(':root').css('--main-color', color);
+
+    $('body').css('background', background);
+
+}
+
+function close() {
+    $('body').fadeOut();
+
+    fetch(`https://${GetParentResourceName()}/close`)
+}
+
+let slideIndex = 0;
+showSlides(slideIndex);
+
+function nextSlide() {
+    slideIndex++;
+    showSlides(slideIndex);
+}
+
+function prevSlide() {
+    slideIndex--;
+    showSlides(slideIndex);
+}
+
+function showSlides(index) {
+    const slides = document.querySelectorAll('.card');
+    if (index >= slides.length) {
+        slideIndex = 0;
+    }
+    if (index < 0) {
+        slideIndex = slides.length - 1;
+    }
+    slides.forEach((slide, i) => {
+        slide.style.transform = `translateX(${(i - slideIndex) * 100}%)`;
+    });
+}
+
+function setPrices(prices) {
+    $('#price_car').html(prices.car + prices.currency);
+    $('#price_krank').html(prices.krank + prices.currency);
+    $('#price_haft').html(prices.haft + prices.currency);
+    $('#price_wohn').html(prices.wohn + prices.currency);
+    $('#price_beruf').html(prices.beruf + prices.currency);
+    $('#price_recht').html(prices.recht + prices.currency);
+}
+
+function triggerButton(type, id) {
+    if (type.includes('btn_anmelden')) {
+        $('#' + id).addClass('btn_abmelden').removeClass('btn_anmelden');
+        $('#' + id).html('Abmelden');
+
+        fetch(`https://${GetParentResourceName()}/setInsurance`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json; charset=UTF-8',
+            },
+            body: JSON.stringify({
+                type: type,
+                id: id
+            })
+        }).then(resp => resp.json()).then(resp => console.log(resp));
+    } else if (type.includes('btn_abmelden')) {
+        $('#' + id).addClass('btn_anmelden').removeClass('btn_abmelden');
+        $('#' + id).html('Anmelden');
+
+        fetch(`https://${GetParentResourceName()}/setInsurance`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json; charset=UTF-8',
+            },
+            body: JSON.stringify({
+                type: type,
+                id: id
+            })
+        }).then(resp => resp.json()).then(resp => console.log(resp));
+    }
+}
+
+function setInsurances(insurances) {
+    if (insurances.car == false) {
+        $('#card_car').remove();
+    }
+
+    if (insurances.krank == false) {
+        $('#card_krank').remove();
+    }
+
+    if (insurances.haft == false) {
+        $('#card_haft').remove();
+    }
+
+    if (insurances.wohn == false) {
+        $('#card_wohn').remove();
+    }
+
+    if (insurances.beruf == false) {
+        $('#card_beruf').remove();
+    }
+
+    if (insurances.recht == false) {
+        $('#card_recht').remove();
+    }
+}
+
+$('.btn').click(function (e) { 
+    close()
+});
+
+$('#car').click(function (e) { 
+    triggerButton($('#car').attr('class'), 'car');
+});
+
+$('#krank').click(function (e) { 
+    triggerButton($('#krank').attr('class'), 'krank');
+});
+
+$('#haft').click(function (e) { 
+    triggerButton($('#haft').attr('class'), 'haft');  
+});
+
+$('#wohn').click(function (e) { 
+    triggerButton($('#wohn').attr('class'), 'wohn');  
+});
+
+$('#beruf').click(function (e) { 
+    triggerButton($('#beruf').attr('class'), 'beruf');  
+});
+
+$('#recht').click(function (e) { 
+    triggerButton($('#recht').attr('class'), 'recht');  
+});

@@ -108,7 +108,7 @@ function triggerButton(type, id) {
                 type: type,
                 id: id
             })
-        }).then(resp => resp.json()).then(resp => console.log(resp));
+        }).then(resp => resp.json());
     } else if (type.includes('btn_abmelden')) {
         $('#' + id).addClass('btn_anmelden').removeClass('btn_abmelden');
         $('#' + id).html('Anmelden');
@@ -122,7 +122,7 @@ function triggerButton(type, id) {
                 type: type,
                 id: id
             })
-        }).then(resp => resp.json()).then(resp => console.log(resp));
+        }).then(resp => resp.json());
     }
 }
 

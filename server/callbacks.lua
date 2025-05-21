@@ -29,15 +29,15 @@ lib.callback.register('ks_insurance:setInsurances', function (source, type, id)
     end
 
     if type == 'btn_anmelden' then
-        local affectedRows = MySQL.update.await('UPDATE ks_insurance SET ? = 1 WHERE identifier = ?', {
-            id,
+        local query = string.format('UPDATE ks_insurance SET `%s` = 1 WHERE identifier = ?', id)
+        local affectedRows = MySQL.update.await(query, {
             xPlayer.getIdentifier()
         })
 
         if affectedRows then return 1 end
     elseif type == 'btn_abmelden' then
-        local affectedRows = MySQL.update.await('UPDATE ks_insurance SET ? = 0 WHERE identifier = ?', {
-            id,
+        local query = string.format('UPDATE ks_insurance SET `%s` = 0 WHERE identifier = ?', id)
+        local affectedRows = MySQL.update.await(query, {
             xPlayer.getIdentifier()
         })
 
